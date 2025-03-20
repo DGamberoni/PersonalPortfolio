@@ -69,7 +69,7 @@ def sum_up():
         st.markdown("### Generate Summaries")
         api_key = st.text_input("Insert your Gemini API key",
                                 type = 'password',
-                                value = 'AIzaSyCH_VRsDIvCkNEjxto9IQrVmBJMhJ7W-0M')
+                                value = '')
         n_communities = st.slider("How many topics do you want to sum up?", min_value=1, max_value=10, value=5, step=1, key="slider2")
         st.session_state['n_communities'] = n_communities
         with_duplicates = st.radio('How do you want to rank them?',
