@@ -1,0 +1,353 @@
+/* Reset di base per garantire compatibilità cross-browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(145deg, #141e30 0%, #243b55 100%);
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Contenitore principale */
+.container {
+    background-color: #1f2937;
+    color: #ffffff;
+    padding: 30px 20px; /* Aumentato */
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 500px; /* Aumentato */
+    width: fit-content;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+    width: fit-content;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Titoli */
+h1 {
+    font-size: 2em; /* Aumentato */
+    margin-bottom: 15px; /* Aumentato */
+    color: #38bdf8; /* Azzurro chiaro */
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 1.5em; /* Aumentato */
+    margin-bottom: 15px; /* Aumentato */
+    color: #60a5fa; /* Azzurro leggero */
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1em; /* Aumentato */
+    color: #d1d5db; /* Grigio chiaro */
+    margin-bottom: 7px; /* Aumentato */
+    font-weight: 600;
+}
+
+/* Sezioni */
+#settings,
+#player-form,
+#game-section {
+    margin-bottom: 15px; /* Aumentato */
+    padding: 15px; /* Aumentato */
+    background-color: #2d3748;
+    border-radius: 12px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.player-name {
+    font-family: 'Montserrat', sans-serif; /* Use the new font */
+    font-size: 2em; /* Make the font size bigger */
+    color: #D3D3D3; /* Set the color to light gray */
+    margin-right: 15px; /* Space between name and input */
+}
+
+/* Lista dei giocatori e punteggi */
+#players-list p {
+    font-size: 1em; /* Aumentato */
+    padding: 8px; /* Aumentato */
+    margin: 7px 0; /* Aumentato */
+    background-color: #3b4252;
+    color: #e5e7eb; /* Grigio chiarissimo */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#players-list span {
+    font-weight: 700;
+    font-size: 1.1em; /* Aumentato */
+    color: #38bdf8;
+}
+
+/* Input punteggi */
+#score-inputs div {
+    background-color: #3b4252;
+    padding: 15px; /* Aumentato */
+    border-radius: 10px;
+    margin-bottom: 15px; /* Aumentato */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #e5e7eb;
+    font-size: 0.8em; /* Aumentato */
+}
+
+.score-display {
+    font-size: 2em; /* Make the score display larger */
+    color: #D3D3D3; /* Light gray color */
+}
+
+/* Input */
+input[type="number"] {
+    width: 60px; /* Aumentato */
+    padding: 10px; /* Aumentato */
+    font-size: 0.8em; /* Aumentato */
+    border: 2px solid #4b5563;
+    border-radius: 8px;
+    margin: 8px 0; /* Aumentato */
+    background-color: #1f2937;
+    color: #e5e7eb;
+    box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.2);
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border-color: #38bdf8;
+    background-color: #2d3748;
+}
+
+/* Pulsanti */
+button {
+    background-color: #38bdf8;
+    color: #1f2937;
+    border: none;
+    padding: 10px 16px; /* Aumentato */
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 0.75em; /* Aumentato */
+    font-weight: 700;
+    margin-top: 15px; /* Aumentato */
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s ease;
+    box-shadow: 0px 5px 20px rgba(56, 189, 248, 0.3);
+}
+
+button:hover {
+    background-color: #60a5fa;
+    box-shadow: 0px 8px 25px rgba(96, 165, 250, 0.4);
+    transform: translateY(-3px);
+}
+
+/* Sezione dei risultati */
+#results {
+    padding: 15px; /* Aumentato */
+    background-color: #3b4252;
+    border-radius: 12px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 15px; /* Aumentato */
+    color: #e5e7eb;
+}
+
+#results h2 {
+    color: #60a5fa;
+    margin-bottom: 15px; /* Aumentato */
+    font-size: 1.2em; /* Aumentato */
+}
+
+#results p {
+    font-size: 0.75em; /* Aumentato */
+    color: #e5e7eb;
+    padding: 8px; /* Aumentato */
+    background-color: #4b5563;
+    border-radius: 10px;
+    margin: 8px 0; /* Aumentato */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+/* Effetti visivi */
+input[type="text"], input[type="number"], button {
+    transition: all 0.3s ease;
+}
+
+/* Focus maggiore sui punteggi */
+#players-list p {
+    font-size: 1.1em; /* Aumentato */
+    padding: 10px; /* Aumentato */
+}
+
+#players-list span {
+    font-size: 1.2em; /* Aumentato */
+    color: #facc15; /* Giallo acceso per evidenziare i punteggi */
+    font-weight: 800;
+}
+
+.score-input-container {
+    display: flex; /* Align items in a row */
+    width: fit-content;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out the items */
+    margin-bottom: 15px; /* Space between players */
+    padding: 10px; /* Padding around the container */
+    border: 1px solid #D3D3D3; /* Optional border to define the box */
+    border-radius: 5px; /* Optional rounding for aesthetics */
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background for better visibility */
+}
+
+.game-container {
+    display: flex; /* Utilizza il layout flessibile */
+    width: fit-content;
+    justify-content: space-between; /* Distribuisce lo spazio tra i figli */
+    align-items: flex-start; /* Allinea gli elementi in cima */
+    margin-top: 20px; /* Aggiungi margine sopra per distanziarli dal titolo */
+}
+
+#players-list {
+    width: 200px; /* Imposta una larghezza fissa per la lista dei giocatori */
+    padding: 10px; /* Aggiungi padding per separare dal bordo */
+    background-color: #2d3748; /* Colore di sfondo */
+    border-radius: 10px; /* Angoli arrotondati */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Ombra per un effetto di profondità */
+    color: #e5e7eb; /* Colore del testo */
+    overflow-y: auto; /* Aggiungi lo scroll se ci sono molti giocatori */
+    max-height: 400px; /* Imposta un'altezza massima per il contenitore */
+}
+
+input[type="text"] {
+    width: calc(100% - 30px);
+    padding: 12px;
+    font-size: 1em;
+    border: 2px solid #4b5563;
+    border-radius: 8px;
+    margin: 8px 0;
+    background-color: #1f2937;
+    color: #e5e7eb;
+    box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.2);
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #38bdf8;
+    background-color: #2d3748;
+}
+
+#current-score {
+    font-size: 48px; /* Modifica la dimensione del font a tuo piacimento */
+    color: #38bdf8; /* Colore del punteggio in evidenza */
+    text-align: center; /* Allinea il testo al centro */
+    margin: 20px 0; /* Margine sopra e sotto */
+}
+
+.score {
+    color: #FFD700; /* A bright yellow color */
+    font-size: 24px; /* Font size */
+    font-weight: bold; /* Make it bold for better visibility */
+    margin-left: 20px;
+    /* Add any other styles you want to match your palette */
+}
+
+/* Hides the spinners in Chrome, Safari, Edge */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hides the spinners in Firefox */
+input[type=number] {
+    -moz-appearance: textfield; /* This hides the spinner in Firefox */
+}
+
+/* General Table Styling */
+#score-table-section {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#score-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif; /* Match with your page's font */
+    font-size: 16px; /* Adjust for consistency */
+    background-color: #ffffff; /* Table background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add slight shadow for a modern look */
+}
+
+/* Table Headers */
+#score-table thead th {
+    background-color: #007bff; /* Match primary theme color */
+    color: #ffffff; /* Contrasting text color */
+    padding: 10px;
+    text-transform: uppercase; /* Optional: Make headers uppercase */
+    font-weight: bold;
+    border: 1px solid #dddddd; /* Border for consistency */
+}
+
+/* Table Body */
+#score-table tbody td {
+    padding: 10px;
+    border: 1px solid #dddddd; /* Light border */
+    text-align: center;
+    color: #333333; /* Text color matching the rest */
+}
+
+/* Row Hover Effect */
+#score-table tbody tr:hover {
+    background-color: #f1f1f1; /* Subtle hover effect */
+}
+
+/* Turn Number Column */
+#score-table tbody td:first-child,
+#score-table thead th:first-child {
+    font-weight: bold;
+    background-color: #f9f9f9;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    #score-table {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    #score-table thead th,
+    #score-table tbody td {
+        padding: 8px;
+    }
+}
+
+#score-table {
+    width: 0;
+    height: 0;
+    visibility: hidden; /* Optional: This hides it without affecting layout */
+}
+
+#score-table-section {
+    width: 0;
+    height: 0;
+    visibility: hidden; /* This hides the element while keeping the layout intact */
+    overflow: hidden; /* Prevents any overflow if there is content still present */
+}
+

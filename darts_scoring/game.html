@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gioco Freccette</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet"> <!-- Add this line -->
+    </head>
+<body>
+    <div class="container">
+        <h1>PUNTEGGI</h1>
+        <div id="game-section">
+            <div id="turn-section">
+                <h2>Turno <span id="turn-number">1</span></h2>
+                <div id="score-inputs"></div>
+
+               
+
+                <button onclick="nextTurn()">Prossimo Turno</button>
+            </div>
+            
+
+           
+
+            <div id="results" style="display:none;"></div>
+            
+        </div>
+        <button id="rivincita-button" onclick="restartGameWithReversedOrder()">Rivincita</button>
+    </div>
+    <div id="score-table-section">
+        <!-- <h2>Score Table</h2> -->
+        <table id="score-table" border="1">
+            <thead>
+                <tr id="score-table-header">
+                    <th>Turn</th>
+                </tr>
+            </thead>
+            <tbody id="score-table-body">
+            </tbody>
+        </table>
+    </div>
+    <div id="chart-container" style="width: 90%; max-width: 800px; margin: 20px auto;">
+        <canvas id="score-chart" style="width: 100%; height: 400px;"></canvas>
+    </div>
+        
+    <script src="script.js"></script>
+</body>
+</html>
+
+
